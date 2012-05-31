@@ -3,13 +3,7 @@ var requestHandlerLaunch = require("./RequestHandlerLaunch");
 var requestHandlerSnack = require("./RequestHandlerSnack");
 
 
-var ConfigurationHandlers=this;
-var handle = {}
-handle["/"] = ConfigurationHandlers.iniciar;
-handle["/iniciar"] = ConfigurationHandlers.iniciar;
-handle["/subir"] = ConfigurationHandlers.subir;
 
-exports.handle=handle;
 
 var querystring = require("querystring");
 
@@ -43,3 +37,21 @@ function iniciar(response, postData) {
 
 exports.iniciar = iniciar;
 exports.subir = subir;
+
+
+
+var ConfigurationHandlers=this;
+var handle = {}
+handle["/"] = this.iniciar;
+handle["/iniciar"] = this.iniciar;
+handle["/subir"] = this.subir;
+
+handle["/fotball"] = requestHandlerFotBall.init;
+handle["/launch"] = requestHandlerLaunch.init;
+handle["/snack"] = requestHandlerSnack.init;
+
+
+
+
+
+exports.handle=handle;
