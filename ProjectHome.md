@@ -1,0 +1,1 @@
+this is an proyect based in create a simply application for  managment list of people, selecting the quota of assistance in the choice and order of postulation of persons, can organize lunches and soccer games for now
